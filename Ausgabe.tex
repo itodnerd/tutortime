@@ -1,0 +1,63 @@
+ \documentclass[a4paper, oneside, 10pt]{article} \usepackage[a4paper,margin=1.5cm,headsep=2em,footskip=0em]{geometry} \usepackage[ngerman]{babel} \usepackage[utf8x]{inputenc} \usepackage{tabularx,longtable,tabu,fancyhdr,lastpage} \usepackage[table]{xcolor}
+ % ***************CONFIG****************
+\newcommand{\GENDATE}{\today}
+\newcommand{\NAME}{Nachname, Vorname}
+\newcommand{\BIRTHDAY}{dd.mm.yyyy}
+\newcommand{\MONTH}{\input{tmp/Month.txt}}
+\newcommand{\TOTAL}{\input{tmp/Time.txt}}
+ %********** CONFIG END*********** 
+\providecommand{\entry}{\input{tmp/Work.txt}}
+ \begin{document} 
+ \pagestyle{fancyplain} \fancyhf{} \fancyhead{$\bullet$ \NAME~(\BIRTHDAY) \hfill $\bullet$ \MONTH \hfill $\bullet$ \GENDATE~$\bullet$ S.~\thepage~von~\pageref{LastPage}} \fancyfoot{} \vspace*{-1em}~
+ \linebreak
+\begin{tabularx}{\textwidth}{|X|X|X|}
+	\hline
+	& & Ort, Datum \\
+	& & Erlangen, \GENDATE \\
+	& & \\
+	& & \\
+	& & \\
+	\hline
+\end{tabularx} %\vspace*{1em}~\linebreak
+\begin{tabularx}{\textwidth}{|X|X|}
+	
+	\hline
+	Name, Vorname & Geburtsdatum \\
+	\NAME & \BIRTHDAY \\
+	& \\
+	\hline
+	
+\end{tabularx} \vspace*{1em}~
+\textbf{Dokumentation der täglichen Arbeitszeit nach § 17 Mindestlohngesetz für \underline{geringfügig}
+	Beschäftigte (studentische Hilfskräfte, Hilfskräfte mit Bachelorabschluss, wissenschaftliche
+	Hilfskräfte und tariflich Beschäftigte)} \vspace*{-1em}~
+\begin{longtabu} to \textwidth {|X|X|X|X|}
+	
+	\hline
+	\multicolumn{4}{|l|}{\cellcolor{gray!25}\textbf{Geleistete Arbeitsstunden}} \\
+	\hline
+	\multicolumn{1}{|l}{\textbf{Kalendermonat:}} & \multicolumn{3}{l|}{} \\
+	\multicolumn{1}{|l}{} & \multicolumn{3}{l|}{\Large\MONTH} \\
+	\hline
+	\cellcolor{gray!25}\textbf{Datum} & \cellcolor{gray!25}\textbf{Uhrzeit von -- bis} & \cellcolor{gray!25}\textbf{Stunden/Minuten} & \cellcolor{gray!25}\textbf{Bemerkungen} \\
+	\hline
+	\endfirsthead
+	\hline
+	\cellcolor{gray!25}\textbf{Datum} & \cellcolor{gray!25}\textbf{Uhrzeit von -- bis} & \cellcolor{gray!25}\textbf{Stunden/Minuten} & \cellcolor{gray!25}\textbf{Bemerkungen} \\
+	\hline
+	\endhead
+	\multicolumn{4}{r}{\small \emph{Fortsetzung auf der nächsten Seite} \ldots}\\
+	\endfoot
+	\multicolumn{4}{|l|}{\textbf{Gesamtzahl der geleisteten Stunden/Minuten}} \\
+	\multicolumn{2}{|l}{} & \multicolumn{2}{l|}{\Large \TOTAL} \\
+	\hline
+	\multicolumn{4}{l}{} \\
+	\multicolumn{4}{l}{} \\
+	\multicolumn{4}{l}{} \\
+	\multicolumn{4}{l}{} \\
+	\multicolumn{2}{l}{\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}} & \multicolumn{2}{l}{\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}} \\
+	\multicolumn{2}{l}{Unterschrift Beschäftigte/r} & \multicolumn{2}{l}{Unterschrift Dienststelle} \\
+	\endlastfoot
+	%**************EINTRÄGE**************
+\entry
+	\end{longtabu} \end{document} 
