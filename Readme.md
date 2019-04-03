@@ -11,7 +11,7 @@ Sie wurde speziell für die Zusammenarbeit mit [Eternity](http://www.komorian.co
 # Wie funktioniert das?
 ## Bedingungen
 * [ ] Ein Handy mit iOS.
-* [ ] Ein Pc mit Linux, auf welchem LaTeX und Python3 installiert ist.
+* [ ] Ein Pc auf welchem LaTeX und Python installiert ist.
 ## Zeit loggen
 Um die Zeit mit Eternity zu loggen, muss man sich erstmal die App auf dem Handy instalieren.
 Die Eternity App kann nun ganz nach Wunsch konfiguriert und verwendet werden, wichtig ist nur, dass zu Beginn jeden Zeitintervalls auf Start und zum Ende Auf Stopp gedrückt wird.
